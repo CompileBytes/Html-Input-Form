@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attractive Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('https://raw.githubusercontent.com/CompileBytes/Html-Input-Form/refs/heads/main/pexels-gsn-travel-28539583.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #fff;
+    }
+
+    .form-container {
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    h2 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .input-field {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .input-field label {
+      font-weight: 600;
+      color: #fff;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .input-field input,
+    .input-field select,
+    .input-field textarea {
+      width: 100%;
+      padding: 12px;
+      padding-left: 40px;
+      border-radius: 8px;
+      border: none;
+      background-color: #333;
+      font-size: 16px;
+      color: #fff;
+    }
+
+    .input-field input:focus,
+    .input-field select:focus,
+    .input-field textarea:focus {
+      outline: none;
+      box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+      border-color: #007BFF;
+    }
+
+    .input-field input[type="radio"],
+    .input-field input[type="checkbox"] {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .input-field .icon {
+      position: absolute;
+      top: 50%;
+      left: 12px;
+      transform: translateY(-50%);
+      color: #888;
+    }
+
+    .options label {
+      display: inline-flex;
+      align-items: center;
+      margin-right: 20px;
+      color: #ddd;
+      font-weight: 500;
+    }
+
+    .options input {
+      margin-right: 8px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 15px;
+      background-color: #FF5722;
+      color: #fff;
+      font-size: 18px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .submit-btn:hover {
+      background-color: #E64A19;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 20px;
+      color: #ddd;
+    }
+
+    .footer a {
+      color: #FF5722;
+      text-decoration: none;
+    }
+
+    .input-field textarea {
+      overflow-y: auto;
+      resize: vertical;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Stylish Form</h2>
+    <form action="#">
+      <div class="input-field">
+        <label for="name">Full Name</label>
+        <div class="icon"><i class="fas fa-user"></i></div>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+
+      <div class="input-field">
+        <label for="email">Email Address</label>
+        <div class="icon"><i class="fas fa-envelope"></i></div>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="input-field">
+        <label for="password">Password</label>
+        <div class="icon"><i class="fas fa-lock"></i></div>
+        <input type="password" id="password" name="password" placeholder="Create a password" required>
+      </div>
+
+      <div class="input-field">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+
+      <div class="input-field">
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="us">United States</option>
+          <option value="ca">Canada</option>
+          <option value="uk">United Kingdom</option>
+          <option value="au">Australia</option>
+        </select>
+      </div>
+
+      <div class="input-field">
+        <label for="bio">Short Bio</label>
+        <textarea id="bio" name="bio" rows="4" placeholder="Tell us something about yourself"></textarea>
+      </div>
+
+      <div class="input-field">
+        <label>Preferences</label>
+        <div class="options">
+          <label><input type="checkbox" name="preference" value="newsletter"> Subscribe to Newsletter</label>
+          <label><input type="checkbox" name="preference" value="updates"> Receive Updates</label>
+        </div>
+      </div>
+
+      <div class="input-field">
+        <label>Gender</label>
+        <div class="options">
+          <label><input type="radio" name="gender" value="male"> Male</label>
+          <label><input type="radio" name="gender" value="female"> Female</label>
+          <label><input type="radio" name="gender" value="other"> Other</label>
+        </div>
+      </div>
+
+      <div class="input-field">
+        <label for="accept">Accept Terms</label>
+        <input type="checkbox" id="accept" name="accept" required>
+        <label for="accept">I agree to the <a href="#">terms and conditions</a>.</label>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+
+    <div class="footer">
+      <p>© 2025 Stylish Form Inc. | <a href="#">Privacy Policy</a></p>
+    </div>
+  </div>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
